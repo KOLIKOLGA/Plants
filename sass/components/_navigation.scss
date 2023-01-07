@@ -1,0 +1,28 @@
+.navigation {
+  max-width: 452px;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation__link {
+  margin-right: 46px;
+  white-space: nowrap;
+  >* {
+    color: $color-header-link;
+    text-decoration: none;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 50px;
+    &:hover {
+      color: $color-additional;
+    }
+  }
+
+}
+.navigation__link:last-child {
+  margin-right: 0px;
+}
+._active {
+  color: $color-additional;
+}

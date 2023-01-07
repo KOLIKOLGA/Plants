@@ -1,0 +1,29 @@
+.layout-3-column {
+  @include columns ($width: 33%);
+}
+.layout-2-column {
+  @include columns ($width: 45%);
+  @include media-tablet {
+    @include columns ($width: 50%);
+  }
+}
+.layout-3-column-grid {
+  display: grid;
+  grid-template-columns: 400px auto;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "image title";
+  @include media-tablet {
+    grid-template-columns: 100%;
+    grid-template-rows: 491px  250px;
+    grid-template-areas:
+    "title"
+    "image";
+    justify-items: center;
+  }
+}
+.layout-1-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -1,0 +1,95 @@
+.prices {
+  background-color: $color-light;
+}
+.prices__wrapper {
+  padding: 40px 109px 125px 109px ;
+  @include media-tablet {
+    padding: 40px 50px 89px;
+    & > .layout-2-column {
+      flex-wrap: nowrap;
+    }
+  }
+}
+.prices__title {
+  @include font($size: 4rem, $height: 4.8rem, $weight: 700, $style: normal);
+  @extend %font-primary;
+  margin-bottom: 57px;
+  @include media-tablet {
+    @include font($size: 3.5rem, $height: 4.2rem, $weight: 700, $style: normal);
+
+  }
+
+}
+.prices__title_right {
+  @include font($size: 4rem, $height: 4.8rem, $weight: 700, $style: normal);
+  @extend %font-primary;
+  margin-bottom: 25px;
+  text-align: end;
+  @include media-tablet {
+    @include font($size: 2.5rem, $height: 3.5rem, $weight: 700, $style: normal);
+    margin-bottom: 21.59px;
+  }
+}
+.color-text {
+  color: $color-primary;
+}
+.prices__items {
+  width: 332px;
+  height: 282px;
+  padding: 34px 41px;
+  border: 1px solid $color-prices-border;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.prices__item {
+  width: 250px;
+  border-radius: 20px;
+
+}
+.price__item_header {
+
+  width: 250px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 16px 40px;
+  justify-content: space-between;
+  background-color: $color-city-button;
+  border-radius: 20px;
+}
+.price__item_main {
+  width: 250px;
+  height: 164px;
+  padding: 16px 40px;
+  border-radius: 0px 0px 20px 20px;
+  background-color: $color-city-button;
+  box-sizing: border-box;
+  display: none;
+}
+.arrow {
+  width: 16px;
+  height: 16px;
+}
+.price__item_descr {
+  @include font($size: 1rem, $height: 1rem, $weight: 300, $style: normal);
+  @extend %font-primary;
+  color: $color-title;
+
+}
+.prices__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  @include media-tablet {
+    justify-content: start;
+  }
+}
+.prices__image {
+  width: 152px;
+  height: 172px;
+  margin-bottom: -7px;
+}

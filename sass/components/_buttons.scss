@@ -1,0 +1,89 @@
+.button {
+  box-sizing: border-box;
+  @extend %font-primary;
+  font-style: normal;
+  @include font($size: 1.6rem, $height: 2rem, $weight: 400, $style: normal);
+  height: 50px;
+  padding: 14px 27px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid $color-additional;
+  border-radius: 10px;
+  cursor: pointer;
+  @extend %transition;
+   &:hover {
+    background-color: $color-additional;
+    color: $color-light;
+    cursor: url('../assets/icons/iconCursor.svg'), auto;
+   }
+}
+.service__button {
+  @include font($size: 2rem, $height: 2.6rem, $weight: 400, $style: normal);
+  @extend %font-add;
+  border-radius: 5px;
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
+  &:hover {
+    background-color: $color-additional;
+    color: $color-light;
+    cursor: url('../assets/icons/iconCursor.svg'), auto;
+  }
+}
+.order__button {
+  background-color: $color-light;
+  border: 1px solid $color-light;
+}
+.prices__button {
+  width: 162px;
+  height: 50px;
+  white-space: nowrap;
+  border-radius: 5px;
+  color: $color-additional;
+  @extend %font-add;
+  @include font($size: 2rem, $height: 2.6rem, $weight: 700, $style: normal);
+  &:hover {
+    background-color: $color-additional;
+    color: $color-light;
+    cursor: url('../assets/icons/iconCursor.svg'), auto;
+  }
+  @include media-tablet {
+    margin-bottom: 34px;
+  }
+}
+
+.arrowDown {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $color-arrow-down;
+  position: relative;
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
+  & > img {
+    width: 6px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(50%, -50%);
+    cursor: url('../assets/icons/iconCursor.svg'), auto;
+  }
+}
+.arrowUp {
+  display: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $color-arrow-up;
+  position: relative;
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
+  & > img {
+    width: 6px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(50%, -50%);
+    cursor: url('../assets/icons/iconCursor.svg'), auto;
+  }
+}

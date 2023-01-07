@@ -1,0 +1,55 @@
+.welcome {
+  background-color: $color-background;
+
+}
+.welcome__wrapper {
+  padding: 62px 109px 62px 109px;
+  @include media-tablet {
+    padding: 40px 50px 70px;
+    & > .layout-2-column {
+      flex-wrap: nowrap;
+    }
+  }
+}
+.welcome__title {
+  @include font($size: 4.5rem, $height: 5rem, $weight: 700, $style: normal);
+  @extend %font-primary;
+  padding-top: calc(98px - 62px);
+  padding-bottom: 42px;
+  @include media-tablet {
+    width: 341px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+  }
+  @include media-mobile {
+    @include font($size: 3.5rem);
+
+  }
+}
+.welcome__description {
+  @include font($size: 2rem, $height: 3.5rem, $weight: 400, $style: normal);
+  @extend %font-primary;
+  padding-bottom: 48px;
+  @include media-tablet {
+    padding-bottom: 30px;
+  }
+}
+.text-color {
+  color: $color-primary;
+}
+.welcome__image {
+  width: 448px;
+  height: 407px;
+  background-image: url('../assets/images/leafs.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include media-tablet {
+    width: 280px;
+    order: 2;
+    background-image: url('../assets/images/leafs.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

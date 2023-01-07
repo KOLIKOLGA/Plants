@@ -1,0 +1,24 @@
+@import "base/base";
+
+//abstracts
+@import "abstract/constants";
+@import "abstract/mixin";
+@import "abstract/placeholder";
+
+//layouts
+
+@import "layouts/header";
+@import "layouts/wrapper";
+@import "layouts/columns";
+@import "layouts/footer";
+
+//components
+@import "components/welcome";
+@import "components/services";
+@import "components/contacts";
+@import "components/navigation";
+@import "components/logo";
+@import "components/about";
+@import "components/buttons";
+@import "components/prices";
+@import "components/accordion";
