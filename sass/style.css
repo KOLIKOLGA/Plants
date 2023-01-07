@@ -59,7 +59,7 @@ input {
   transition: all 0.3s ease-out;
 }
 
-.accordion__title, .price__item_descr, .prices__title_right, .prices__title, .button, .about__text, .welcome__description, .welcome__title, body {
+.accordion__title, .price__item_descr, .prices__title_right, .prices__title, .button, .about__text, .service-card__description, .welcome__description, .welcome__title, body {
   font-family: "Inter", sans-serif;
 }
 
@@ -354,9 +354,10 @@ input {
 @media (max-width: 414px) {
   .service__button {
     padding: 8px 21px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
+    font-style: normal;
   }
 }
 
@@ -395,11 +396,10 @@ input {
 
 .service-card__description {
   text-align: center;
-  font-family: "Inter";
-  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 2rem;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  font-style: normal;
   color: #717171;
 }
 

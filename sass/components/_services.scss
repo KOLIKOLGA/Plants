@@ -51,9 +51,8 @@
   }
   @include media-mobile {
     padding: 8px 21px;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
+    @include font($size: 1.5rem, $height: 2rem, $weight: 400);
+
   }
 }
 .service__card {
@@ -86,11 +85,8 @@
 }
 .service-card__description {
   text-align: center;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  @extend %font-primary;
+  @include font($size: 1.6rem, $height: 2rem, $weight: 400, $style: normal);
   color: $color-title;
 }
 .service__image {
