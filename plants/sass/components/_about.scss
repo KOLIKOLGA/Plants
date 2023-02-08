@@ -1,0 +1,117 @@
+.about__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 109px 90px 109px;
+  @include media-laptop-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @include media-tablet {
+    padding: 40px 60px 95px 50px;
+  }
+  @include media-mobile {
+    padding: 30px 25px;
+  }
+}
+.about__content {
+  @include media-laptop-small {
+    width: 100%;
+    text-align: center;
+  }
+  @include media-tablet {
+    text-align: start;
+  }
+}
+.about__image {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: relative;
+  @include media-laptop-small {
+    justify-content: center;
+  }
+  > img {
+    margin-top: 10px;
+    width: 464px;
+    height: 478px;
+    @include media-laptop-small {
+      width: 300px;
+      height: 330px;
+    }
+
+  }
+  @include media-tablet {
+    margin-left: 26px;
+    justify-content: center;
+    > img {
+      width: 250px;
+      height: 258px;
+
+    }
+  }
+  @include media-mobile {
+    margin-left: 0px;
+    > img {
+      width: 150px;
+      height: 147px;
+    }
+  }
+}
+.color-bright {
+  color: $color-additional;
+}
+.about__title {
+  @include font($size: 4rem, $height: 5.2rem, $weight: 400, $style: normal);
+  @extend %font-add;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 464px;
+  @include media-laptop-small {
+    margin: 20px auto;
+  }
+  @include media-tablet {
+    @include font($size: 3.5rem, $height: 4.6rem, $weight: 400, $style: normal);
+    max-width: 423px;
+    width: 100%;
+    margin: 0px 120px 50px;
+    text-align: center;
+  }
+  @include media-mobile {
+    width: 288px;
+    @include font($size: 2.5rem, $height: 3.3rem, $weight: 400, $style: normal);
+    text-align: center;
+    margin: 10px auto 12px;
+  }
+  @include media-mobile-small {
+    @include font($size: 2rem, $height: 2.5rem, $weight: 400);
+    width: 200px;
+    margin: 0px auto 20px;
+  }
+}
+.about__text {
+  @include font($size: 2rem, $height: 3rem, $weight: 400, $style: normal);
+  @extend %font-primary;
+  color: $color-text;
+  width: 600px;
+  margin-top: 30px;
+  @include media-laptop-small {
+    width: 100%;
+    margin: 30px auto;
+  }
+  @include media-tablet {
+    width: 100%;
+    @include font($size: 2rem, $height: 3rem, $weight: 400, $style: normal);
+    margin-bottom: 60px;
+  }
+  @include media-mobile {
+    @include font($size: 1.5rem, $height: 2.5rem, $weight: 400, $style: normal);
+    width: 330px;
+    margin: auto;
+  }
+  @include media-mobile-small {
+    @include font($size: 1.5rem, $height: 2.4rem);
+    width: 85%;
+  }
+}

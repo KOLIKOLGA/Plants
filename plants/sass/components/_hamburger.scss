@@ -1,0 +1,53 @@
+
+.menu__icon {
+  @include media-mobile {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 40px;
+  height: 34px;
+
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
+  }
+
+}
+
+.icon-line {
+ @include media-mobile {
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: $color-title;
+ }
+}
+
+.menu__icon .line1,
+.menu__icon .line4 {
+  @include media-mobile {
+    top: 50%;
+    transform: scale(1) translate(0, -50%);
+
+  }
+}
+
+.menu__icon._active .line1,
+.menu__icon._active .line4 {
+  transform: scale(0) translate(0, -50%);
+
+}
+.menu__icon._active .line2 {
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 0;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+.menu__icon._active .line3 {
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 0;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}

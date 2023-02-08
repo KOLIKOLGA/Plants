@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+  @extend %font-primary;
+}
+body._lock {
+  position: fixed;
+  overflow: hidden;
+}
+h1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+h2 {
+  @extend %font-add;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 5.2rem;
+}
+h3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+ul, li {
+  list-style-type: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
+}
+button {
+  border: 0;
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
+}
+input {
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
+}

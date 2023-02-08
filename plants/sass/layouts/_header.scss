@@ -1,0 +1,41 @@
+.header {
+  background-color: $color-background;
+  position: relative;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 42px 110px;
+  box-sizing: border-box;
+  @include media-tablet {
+    padding: 35px 50px;
+  }
+  @include media-mobile {
+    padding: 32px 55px 35px 25px;
+    max-width: 400px;
+    width: 98%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.header__wrapper._active {
+
+  @include media-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 55px 35px 25px;
+    box-sizing: border-box;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.header__logo-line {
+  display: flex;
+  align-items: center;
+}
