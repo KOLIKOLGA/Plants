@@ -1,6 +1,7 @@
 {
   "name": "plants",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "style": "sass --watch sass/style.scss sass/style.css",
@@ -10,15 +11,5 @@
   "license": "ISC",
   "dependencies": {
     "normalize-scss": "^7.0.1"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KOLIKOLGA/Plants.git"
-  },
-  "bugs": {
-    "url": "https://github.com/KOLIKOLGA/Plants/issues"
-  },
-  "homepage": "https://github.com/KOLIKOLGA/Plants#readme",
-  "description": ""
+  }
 }

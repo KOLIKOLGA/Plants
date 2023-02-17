@@ -10,6 +10,12 @@
       }
     }
   }
+  @include media-mobile {
+    padding: 22px;
+  }
+  @include media-mobile-small {
+    padding: 20px;
+  }
 }
 .footer__link {
   display: inline-block;
@@ -22,7 +28,7 @@
   border-radius: 5px;
   position: relative;
   @include media-tablet {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   &:hover {
     background-color: $color-additional;
@@ -49,7 +55,18 @@
   @include media-tablet {
     margin-top: 20px;
   }
+  @include media-mobile {
+    margin-top: 0px;
+  }
 }
 .link__image:hover {
   background-color: $color-additional;
+}
+.footer {
+  @include media-tablet {
+    padding: 20px 40px;
+  }
+  @include media-mobile {
+    padding: 10px 10px;
+  }
 }

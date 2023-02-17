@@ -1,6 +1,7 @@
 .logo {
   display: inline-flex;
   text-decoration: none;
+  z-index: 100;
 }
 .logo-text {
   @include font($size:1.6rem, $height: 2.1rem, $weight: 400, $style: normal);

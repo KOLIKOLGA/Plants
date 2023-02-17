@@ -3,11 +3,13 @@
 }
 .layout-2-column {
   @include columns ($width: 45%);
+
   @include media-tablet {
-    @include columns ($width: 50%);
+    @include columns ($width: 100%);
   }
+
 }
-.layout-3-column-grid {
+.layout-2-column__grid {
   display: grid;
   grid-template-columns: 400px auto;
   grid-template-rows: 1fr;
@@ -15,15 +17,31 @@
   "image title";
   @include media-tablet {
     grid-template-columns: 100%;
-    grid-template-rows: 491px  250px;
+    grid-template-rows: 457px  auto;
     grid-template-areas:
     "title"
     "image";
-    justify-items: center;
+     justify-items: center;
+  }
+  @include media-mobile {
+    grid-template-rows: 320px  auto;
   }
 }
-.layout-1-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.layout-3-column__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center;
+  gap: 55px 90px;
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    gap: 34px 90px;
+  }
+  @include media-mobile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 30px 90px;
+  }
 }

@@ -13,6 +13,11 @@
   border-radius: 10px;
   cursor: pointer;
   @extend %transition;
+  @include media-mobile {
+    @include font($size: 1rem, $height: 2rem);
+    padding: 8.3px 18px;
+    height: 34px;
+  }
    &:hover {
     background-color: $color-additional;
     color: $color-light;
@@ -24,15 +29,46 @@
   @extend %font-add;
   border-radius: 5px;
   cursor: url('../assets/icons/iconCursor.svg'), auto;
-  &:hover {
-    background-color: $color-additional;
-    color: $color-light;
-    cursor: url('../assets/icons/iconCursor.svg'), auto;
+}
+.service__button_colored {
+  @include font($size: 2rem, $height: 2.6rem, $weight: 400, $style: normal);
+  @extend %font-add;
+  border-radius: 5px;
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
+  background-color: $color-additional;
+  color: $color-light;
+  &:nth-child(2) {
+    padding: 12px 54px;
+    @include media-mobile {
+      padding: 8px 40px 7px;
+      @include font($size: 1.5rem, $height: 2rem, $weight: 400);
+    }
+  }
+  &:nth-child(1) {
+    padding: 12px 40px;
+    @include media-mobile {
+      padding: 8px 30px 7px;
+      @include font($size: 1.5rem, $height: 2rem, $weight: 400);
+    }
+  }
+  &:nth-child(3) {
+    padding: 12px 40px;
+    @include media-mobile {
+      padding: 8px 30px 7px;
+      @include font($size: 1.5rem, $height: 2rem, $weight: 400);
+    }
+  }
+  @include media-mobile {
+    padding: 8px 21px;
+    @include font($size: 1.5rem, $height: 2rem, $weight: 400);
   }
 }
 .order__button {
+  width: 88px;
+  height: 25px;
   background-color: $color-light;
   border: 1px solid $color-light;
+  color: $color-title;
 }
 .prices__button {
   width: 162px;
@@ -42,6 +78,13 @@
   color: $color-additional;
   @extend %font-add;
   @include font($size: 2rem, $height: 2.6rem, $weight: 700, $style: normal);
+  @include media-mobile {
+    width: 121px;
+    height: 34px;
+    @include font($size: 1.5rem, $height: 2rem, $weight: 700, $style: normal);
+    padding: 8px 22px;
+    margin-top: 19px;
+  }
   &:hover {
     background-color: $color-additional;
     color: $color-light;
@@ -50,40 +93,19 @@
   @include media-tablet {
     margin-bottom: 34px;
   }
+  @include media-mobile {
+    margin-bottom: 0;
+  }
 }
 
-.arrowDown {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: $color-arrow-down;
-  position: relative;
-  cursor: url('../assets/icons/iconCursor.svg'), auto;
-  & > img {
-    width: 6px;
-    height: 8px;
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(50%, -50%);
-    cursor: url('../assets/icons/iconCursor.svg'), auto;
-  }
-}
-.arrowUp {
-  display: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: $color-arrow-up;
-  position: relative;
-  cursor: url('../assets/icons/iconCursor.svg'), auto;
-  & > img {
-    width: 6px;
-    height: 8px;
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(50%, -50%);
-    cursor: url('../assets/icons/iconCursor.svg'), auto;
-  }
+
+
+.city-card__button {
+  @include font($size: 1rem, $height: 1.3rem, $weight: 700, $style: normal);
+  @extend %font-add;
+  padding: 7px 29px;
+  width: 122px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,14 +1,24 @@
 .welcome {
   background-color: $color-background;
-
 }
 .welcome__wrapper {
+  box-sizing: border-box;
   padding: 62px 109px 62px 109px;
+
+  @include media-laptop-small {
+    padding: 40px 55px 70px;
+  }
   @include media-tablet {
-    padding: 40px 50px 70px;
+    padding: 0px 50px 0px;
     & > .layout-2-column {
       flex-wrap: nowrap;
     }
+  }
+  @include media-mobile {
+    padding: 96px 25px 25px;
+  }
+  @include media-mobile-small {
+    padding: 96px 24px 32px;
   }
 }
 .welcome__title {
@@ -16,22 +26,40 @@
   @extend %font-primary;
   padding-top: calc(98px - 62px);
   padding-bottom: 42px;
+  color: $color-title;
+
   @include media-tablet {
+    @include font($size: 3.5rem, $height: 5rem);
     width: 341px;
-    padding-bottom: 30px;
-    padding-top: 0px;
+    padding-bottom: 40px;
+    padding-top: 40px;
   }
   @include media-mobile {
-    @include font($size: 3.5rem);
-
+    @include font($size: 2.5rem, $height: 3.5rem);
+    width: 300px;
+    padding-bottom: 20px;
+  }
+  @include media-mobile-small {
+    // @include font($size: 2rem);
+    width: 250px;
+  }
+}
+.welcome__content {
+  @include media-mobile {
+    width: 100%;
   }
 }
 .welcome__description {
   @include font($size: 2rem, $height: 3.5rem, $weight: 400, $style: normal);
   @extend %font-primary;
+  color: $color-text;
   padding-bottom: 48px;
   @include media-tablet {
+    @include font($size: 1.6rem, $height: 2.5rem);
     padding-bottom: 30px;
+  }
+  @include media-mobile {
+    padding-bottom: 25px;
   }
 }
 .text-color {
@@ -48,8 +76,12 @@
     width: 280px;
     order: 2;
     background-image: url('../assets/images/leafs.png');
-    background-position: center;
+    background-position: 0px 40px;
     background-repeat: no-repeat;
     background-size: contain;
+    margin-left: 40px;
+  }
+  @include media-mobile {
+    display: none;
   }
 }

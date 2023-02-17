@@ -1,8 +1,10 @@
 .accordion__button {
+  box-sizing: border-box;
   border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 450px;
   width: 100%;
   height: 50px;
   background-color: $color-city-button;
@@ -10,25 +12,52 @@
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: relative;
-  z-index: 50;
-  cursor: url('../assets/icons/iconCursor.svg'), auto;
+  margin-left: 50px;
+  //cursor: url('../assets/icons/iconCursor.svg'), auto;
   @extend %transition;
+  @include media-laptop-small {
+    max-width: 400px;
+    margin-left: 0px;
+  }
+  @include media-tablet {
+    left: 0;
+  }
 }
 .accordion__button:hover {
-
+  box-shadow: non;
+  background-color: $color-accordion-button-active;
+}
+.click__button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   height: 50px;
   padding: 5px 22px;
   box-sizing: border-box;
   background-color: $color-accordion-button-active;
   box-shadow: none;
-  position: relative;
-  // & ~ .city__list {
-  //   display: block;
-  // }
+
+  margin-left: 50px;
+  //cursor: url('../assets/icons/iconCursor.svg'), auto;
+  @include media-laptop-small {
+    max-width: 400px;
+    margin-left: 0px;
+  }
+  @include media-tablet {
+    margin-top: 0px;
+    left: 0;
+  }
+  @include media-mobile {
+    margin-top: 0px;
+    left: 0;
+  }
+  & ~ .city__list {
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+  }
 }
 
 .accordion__title {
@@ -36,25 +65,54 @@
   @include font($size: 2rem, $height: 4rem, $weight: 400, $style: normal);
   letter-spacing: 0.05em;
   color: $color-title;
-  cursor: url('../assets/icons/iconCursor.svg'), auto;
 
+  @include media-laptop-small {
+    max-width: 400px;
+    left: 0;
+  }
+  @include media-tablet {
+    left: 0;
+  }
+  @include media-mobile-small {
+    @include font($size: 1.5rem, $height: 1.5rem, $weight: 400, $style: normal);
+  }
 }
 .city__list {
+  @extend %transition;
   display: none;
-  width: 450px;
-  height: 254px;
-  padding: 47px 41px 31px;
+  max-width: 450px;
+  width: 100%;
+  height: 270px;
+  padding: 27px 41px 31px;
   background-color: $color-city-button;
   box-sizing: border-box;
   position: absolute;
   left: 0;
   top: 0;
-  margin-top: 50px;
+  // margin-top: 50px;
+  margin-left: 50px;
+  @include media-laptop-small {
+    max-width: 400px;
+    margin-left: 0;
+  }
+  @include media-tablet {
+    height: 250px;
+    left: 0;
+    padding: 25px 41px 31px;
+  }
+  @include media-mobile {
+    margin-left: 0;
+  }
 }
 .city__list>li {
-  padding-bottom: 25px;
+  @extend %transition;
+  padding-bottom: 15px;
   color: $color-primary;
   cursor: url('../assets/icons/iconCursor.svg'), auto;
+  @include font($size: 2rem, $height: 4rem, $weight: 400, $style: normal);
+  @include media-mobile-small {
+    @include font($size: 1.5rem, $height: 2rem, $weight: 400, $style: normal);
+  }
 }
 .city__item::after {
   content: "";
@@ -68,4 +126,20 @@
   &::after {
     background-color: $color-title;
   }
+}
+.drop__button {
+  @extend %transition;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-image: url(../assets/icons/1accordion_btn.svg);
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
+}
+.drop__button._active {
+  @extend %transition;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-image: url(../assets/icons/2accordion_btn.jpg);
+  cursor: url('../assets/icons/iconCursor.svg'), auto;
 }
