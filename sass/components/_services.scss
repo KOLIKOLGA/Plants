@@ -116,7 +116,7 @@
 }
 
 .service__card {
-  width: 100%;
+  min-width: calc(100% / 3);
   height: 100%;
   position: relative;
   &.blur {
